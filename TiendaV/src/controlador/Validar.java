@@ -42,7 +42,7 @@ public class Validar extends HttpServlet {
 			String pass=request.getParameter("txtpass");
 			em=edao.validar(user, pass);
 			if(em.getUser()!=null){	
-				request.setAttribute("usuario", em);//aqui dice empleado
+				request.setAttribute("usuario", em);
 				request.getRequestDispatcher("Controlador?menu=Principal").forward(request, response);
 			}else {
 				request.getRequestDispatcher("index.jsp").forward(request, response);

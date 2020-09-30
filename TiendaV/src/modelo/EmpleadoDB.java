@@ -18,7 +18,7 @@ public class EmpleadoDB {
     	 Empleado em=new Empleado();
     	 String sql=" select * from empleado  where  User=? and Dni=?";
     	 try {
-    		 con=cn.conectarBD();//Cambialo a tods
+    		 con=cn.conectarBD();
     		 ps=con.prepareStatement(sql);
     		 ps.setString(1,user);
     		 ps.setString(2,dni);
@@ -33,7 +33,7 @@ public class EmpleadoDB {
     	 } catch(Exception e) {
     		 
     	 }
-    	 //em.setUser("User1");//prueba ahora ya no te va funcionarn
+    	 
     	 return em;
      }
     //operaciones CRUD
